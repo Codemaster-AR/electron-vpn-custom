@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #282c34; /* Dark background */
+    color: #f8f8f2; /* Light text */
+  }
+  
+  .vpn-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  header h1 {
+    color: #61dafb; /* Accent color */
+    margin-bottom: 40px;
+  }
+  
+  main {
+    background-color: #3a3f4a; /* Slightly lighter dark for main content */
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 300px; /* Fixed width for the app */
+  }
+  
+  .connection-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .status-indicator {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #dc3545; /* Red for disconnected */
+    transition: background-color 0.3s ease;
+  }
+  
+  .status-indicator.connected {
+    background-color: #28a745; /* Green for connected */
+  }
+  
+  .connection-status p {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .server-selection {
+    margin-bottom: 20px;
+  }
+  
+  .server-selection label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    color: #cccccc;
+  }
+  
+  .server-selection select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: #494f5b;
+    color: #f8f8f2;
+    font-size: 1em;
+    appearance: none; /* Remove default select styling */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23f8f8f2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13.2-5.4H18.6c-5%200-9.3%201.8-13.2%205.4A17.6%2017.6%200%200%200%200%2082.5c0%204.4%201.8%208.7%205.4%2012.3l128%20127.9c3.6%203.6%207.8%205.4%2012.3%205.4s8.7-1.8%2012.3-5.4l128-127.9c3.6-3.6%205.4-7.8%205.4-12.3%200-4.4-1.8-8.7-5.4-12.3z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 12px auto;
+  }
+  
+  .server-selection select:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+
+  .connect-button {
+    background-color: #28a745; /* Green for connect */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.5em;
+    border-radius: 50px; /* Pill shape */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    width: 80%; /* Make button wider */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .connect-button.disconnect {
+    background-color: #dc3545; /* Red for disconnect */
+  }
+  
+  .connect-button:hover:not(:disabled) {
+    opacity: 0.9;
+  }
+
+  .connect-button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+  
+  .details {
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #cccccc;
+  }
+  
+  .details p {
+    margin: 5px 0;
+  }
